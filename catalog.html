@@ -32,10 +32,10 @@
               <form class="user-navigation-search" action="https://echo.htmlacademy.ru/" method="get">
                 <label class="user-navigation-search-label">
                   <input type="text" class="user-navigation-search-input visually-hidden" name="Search" placeholder="Поиск">
+                </label>
                   <button class="search-button" type="submit" name="show-search" title="Открыть поиск">
                     <span class="search-button-icon"></span>
                   </button>
-              </label>
             </form>
             </li>
             <li class="user-navigation-item">
@@ -80,17 +80,17 @@
                         <ul class="catalog-filter-list">
                             <li class="catalog-filter-item">
                                 <label class="filter">
-                                <input class="filter-input" type="checkbox" name="pool" checked><span claas="block-text">Бассейн</span>
+                                <input class="filter-input" type="checkbox" name="pool" checked><span class="block-text">Бассейн</span>
                                 </label>
                             </li>
                             <li class="catalog-filter-item">
                                 <label class="filter">
-                                <input class="filter-input" type="checkbox" name="parking" checked><span claas="block-text">Парковка</span>
+                                <input class="filter-input" type="checkbox" name="parking" checked><span class="block-text">Парковка</span>
                                 </label>
                             </li>
                             <li class="catalog-filter-item">
                                 <label class="filter">
-                                <input class="filter-input" type="checkbox" name="wifi"><span claas="block-text">Wi-Fi</span>
+                                <input class="filter-input" type="checkbox" name="wifi"><span class="block-text">Wi-Fi</span>
                                 </label>
                             </li>
                         </ul>
@@ -164,7 +164,7 @@
                                     <span class="hotel-item-price block-text">От 4000 ₽</span></div>
                                 <div class="hotel-buttons">
                                     <a class="brown-button" href="#" target="_blank">Подробнее</a>
-                                    <button class="blue-button" type="button" href="#" name="add-fav">В избранное</button>
+                                    <button class="blue-button" type="button" name="add-fav">В избранное</button>
                                 </div>
                                 <div class="hotel-rating">
                                     <img class="hotel-stars" src="#" alt="Четыре звезды">
@@ -183,7 +183,7 @@
                                     <span class="hotel-item-price block-text">От 5000 ₽</span></div>
                                 <div class="hotel-buttons">
                                     <a class="brown-button" href="#" target="_blank">Подробнее</a>
-                                    <button class="green-button" type="button" href="#" name="add-fav">В избранном</button>
+                                    <button class="green-button" type="button" name="add-fav">В избранном</button>
                                 </div>
                                 <div class="hotel-rating">
                                     <img class="hotel-stars" src="#" alt="Четыре звезды">
@@ -202,7 +202,7 @@
                                     <span class="hotel-item-price block-text">От 2500 ₽</span></div>
                                 <div class="hotel-buttons">
                                     <a class="brown-button" href="#" target="_blank">Подробнее</a>
-                                    <button class="blue-button" type="button" href="#" name="add-fav">В избранное</button>
+                                    <button class="blue-button" type="button" name="add-fav">В избранное</button>
                                 </div>
                                 <div class="hotel-rating">
                                     <img class="hotel-stars" src="#" alt="Три звезды">
@@ -221,7 +221,7 @@
                                     <span class="hotel-item-price block-text">От 1500 ₽</span></div>
                                 <div class="hotel-buttons">
                                     <a class="brown-button" href="#" target="_blank">Подробнее</a>
-                                    <button class="blue-button" type="button" href="#" name="add-fav">В избранное</button>
+                                    <button class="blue-button" type="button" name="add-fav">В избранное</button>
                                 </div>
                                 <div class="hotel-rating">
                                     <img class="hotel-stars" src="#" alt="Две звезды">
@@ -230,11 +230,11 @@
                             </div>
                         </li>
                     </ol>
-                    <section class="result-navigation">
+                    <div class="result-navigation">
                         <div class="result-pagination">
                             <ul class="result-pagination-list">
                                 <li class="result-pagination-item">
-                                    <a class="result-pagination-link result-pagination-current">1</a>
+                                    <a class="result-pagination-link result-pagination-current ">1</a>
                                 </li>
                                 <li class="result-pagination-item">
                                     <a class="result-pagination-link" href="#">2</a>
@@ -267,40 +267,41 @@
                                 <option value="9">9</option>
                             </select>
                         </div>
-                    </section>
+                    </div>
             </section>
         </section>
-        <section class="catalog-subscribe">
-            <h2 class="catalog-subscribe-title">Подпишитесь на рассылку</h2>
-            <p class="catalog-subscribe-description main-text">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
-            <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-              <input type="email" name="email" placeholder="Ваш e-mail">
-              <button class="button-subscribe blue-button" type="submit">Подписаться</button>
-            </form>
+            <section class="catalog-subscribe">
+                <h2 class="catalog-subscribe-title">Подпишитесь на рассылку</h2>
+                <p class="catalog-subscribe-description main-text">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
+                <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+                    <input type="email" name="email" placeholder="Ваш e-mail">
+                    <button class="button-subscribe blue-button" type="submit">Подписаться</button>
+                </form>
+            </section>
         </main>
         <footer class="index-footer">
-          <ul class="social-list">
-            <li class="social-item">
-              <a class="social-button vk" href="https://vk.com/htmlacademy">
-                <span class="visually-hidden">Вконтакте</span>
-              </a>
-            </li>
-            <li class="social-item">
-              <a class="social-button tg" href="https://t.me/htmlacademy">
-                <span class="visually-hidden">Телеграм</span>
-              </a>
-            </li>
-            <li class="social-item">
-              <a class="social-button yt" href="https://www.youtube.com/user/htmlacademyru">
-                <span class="visually-hidden">Ютуб</span>
-              </a>
-            </li>
-          </ul>
-          <a class="phone" href="tel:+78128121212" title="Наш номер телефона">+7 (812) 812-12-12</a>
-          <a class="html-logo" href="https://htmlacademy.ru/">
-            <img src="#" alt="Лого HTML Академии">
-          </a>
+            <h2 class="visually-hidden">Наши контакты</h2>
+                <ul class="social-list">
+                    <li class="social-item">
+                    <a class="social-button vk" href="https://vk.com/htmlacademy">
+                        <span class="visually-hidden">Вконтакте</span>
+                    </a>
+                    </li>
+                    <li class="social-item">
+                    <a class="social-button tg" href="https://t.me/htmlacademy">
+                        <span class="visually-hidden">Телеграм</span>
+                    </a>
+                    </li>
+                    <li class="social-item">
+                    <a class="social-button yt" href="https://www.youtube.com/user/htmlacademyru">
+                        <span class="visually-hidden">Ютуб</span>
+                    </a>
+                    </li>
+                </ul>
+                <a class="phone" href="tel:+78128121212" title="Наш номер телефона">+7 (812) 812-12-12</a>
+                <a class="html-logo" href="https://htmlacademy.ru/">
+                    <img src="#" alt="Лого HTML Академии">
+                </a>
         </footer>
-      </main>
   </body>
 </html>
