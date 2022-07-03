@@ -123,16 +123,10 @@
                         <fieldset class="catalog-filter-group">
                             <legend class="catalog-filter-type head4">Стоимость, ₽:</legend>
                                 <div class="catalog-filter-price">
-                                    <label class="catalog-filter-price-from">
-                                        <input class="catalog-filter-price-number" type="number" name="from-number" value="0">от
-                                    </label>
-                                        <input class="filter-input-range" type="range" id="pricefrom" name="from-number" min="0" max="10000" value="0" step="10">
-                                    <label class="catalog-filter-price-to">
-                                        <input class="catalog-filter-price-number" type="number" name="to-number" value="9000">до
-                                    </label>
-                                        <input class="filter-input-range" type="range" id="priceto" name="to-number" min="0" max="10000" value="9000" step="10">
-                                        <label class="price-range" for="pricefrom"></label>
-                                        <label class="price-range" for="priceto"></label>
+                                        <input class="filter-price-input price-from block-text" id="price-from" type="number" name="from-number" value="0" min="0" max="9999">
+                                        <label class="filter-price-label label-from block-text" for="price-from">от</label>
+                                        <input class="filter-price-input price-to block-text" id="price-to" type="number" name="to-number" value="9000" min="0" max="9999">
+                                        <label class="filter-price-label label-to block-text" for="price-to">до</label>
                                 </div>
                         </fieldset>
                         <div class="filter-buttons">
