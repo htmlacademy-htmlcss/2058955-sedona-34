@@ -23,7 +23,7 @@
                   </a>
                 </li>
                 <li  class="navigation-item">
-                  <a class="navigation-link navigation-current" href="catalog.html">
+                  <a class="navigation-link navigation-current">
                     Гостиницы
                   </a>
                 </li>
@@ -58,7 +58,7 @@
                         </a>
                     </li>
                     <li class="catalog-breadcrumbs-item">
-                        <a class="catalog-breadcrumbs-link small-text" href="#">Гостиницы</a>
+                        <a class="catalog-breadcrumbs-link small-text">Гостиницы</a>
                     </li>
                 </ol>
             </section>
@@ -113,7 +113,7 @@
                                     <label class="filter">
                                         <input class="filter-input visually-hidden" type="radio" name="hotel-type" value="Apparts">
                                         <span class="filter-mark"></span>
-                                        <span class="filter-name">Аппартаменты</span>
+                                        <span class="filter-name">Апартаменты</span>
                                     </label>
                                 </li>
                             </ul>
@@ -123,10 +123,16 @@
                         <fieldset class="catalog-filter-group">
                             <legend class="catalog-filter-type head4">Стоимость, ₽:</legend>
                                 <div class="catalog-filter-price">
-                                        <input class="filter-price-input price-from block-text" id="price-from" type="number" name="from-number" value="0" min="0" max="9999">
+                                        <input class="filter-price-input price-from block-text" id="price-from" type="number" name="from-number" placeholder="0" min="0" max="9999">
                                         <label class="filter-price-label label-from block-text" for="price-from">от</label>
-                                        <input class="filter-price-input price-to block-text" id="price-to" type="number" name="to-number" value="9000" min="0" max="9999">
+                                        <input class="filter-price-input price-to block-text" id="price-to" type="number" name="to-number" placeholder="9000" min="0" max="9999">
                                         <label class="filter-price-label label-to block-text" for="price-to">до</label>
+                                </div>
+                                <div class="price-range">
+                                    <div class="price-range-bar" style="left:0px; width:196px">
+                                        <button class="price-range-toggle price-range-min" type="button"></button>
+                                        <button class="price-range-toggle price-range-max" type="button"></button>
+                                    </div>
                                 </div>
                         </fieldset>
                         <div class="filter-buttons">
@@ -141,22 +147,22 @@
                 <div class="sort-wrapper">
                     <h2 class="results-title head2">Найдено гостиниц: <span class="result-number head2">38</span></h2>
                     <select class="result-control block-text" aria-label="Сортировка">
-                        <option value="cheap">Сначала Дешевые</option>
-                        <option value="expensive">Сначала Дорогие</option>
+                        <option value="cheap">Сначала дешевые</option>
+                        <option value="expensive">Сначала дорогие</option>
                     </select>
                     <ul class="view-list">
-                        <li class="view-item view-type-selected">
-                            <a class="view-type" href="#">2
+                        <li class="view-item">
+                            <a class="view-type sort-icon view-type-selected" href="#">
                                 <span class="visually-hidden">Показать карточки</span>
                             </a>
                         </li>
                         <li class="view-item">
-                            <a class="view-type" href="#">2
+                            <a class="view-type sort-slide" href="#">
                                 <span class="visually-hidden">Показать слайды</span>
                             </a>
                         </li>
                         <li class="view-item">
-                            <a class="view-type" href="#">2
+                            <a class="view-type sort-list" href="#">
                                 <span class="visually-hidden">Показать список</span>
                             </a>
                         </li>
@@ -177,14 +183,14 @@
                                     <a class="hotel-more  button brown-button" href="#" target="_blank">Подробнее</a>
                                     <button class="to-fav button blue-button" type="button">В избранное</button>
                                     <p class="star-rating star4"></p>
-                                    <p class="rating-number">Рейтинг 8,5</p>
+                                    <p class="rating-number">Рейтинг: 8,5</p>
                         </li>
                         <li class="hotel-item">
                                 <a href="#" class="hotel-item-link">
                                     <figure class="hotel">
                                         <img class="hotel-item-image" src="images/catalog/hotel-villaspocodiablo.jpg" width="300" height="211" alt="Вид из Villas at Poco Diablo">  
                                             <figcaption class="hotel-name">
-                                                <h3 class="hotel-item-name head3">Villas at Poco Diablo</h3>
+                                                <h3 class="hotel-item-name head3">villas At poco diablo</h3>
                                             </figcaption>
                                     </figure>
                                 </a>
@@ -193,7 +199,7 @@
                                     <a class="hotel-more button brown-button" href="#" target="_blank">Подробнее</a>
                                     <button class="to-fav button green-button" type="button">В избранном</button>
                                     <p class="star-rating star4"></p>
-                                    <p class="rating-number">Рейтинг 9,2</p>
+                                    <p class="rating-number">Рейтинг: 9,2</p>
                         </li>
                         <li class="hotel-item">
                                 <a href="#" class="hotel-item-link">
@@ -209,7 +215,7 @@
                                     <a class="hotel-more button brown-button" href="#" target="_blank">Подробнее</a>
                                     <button class="to-fav button blue-button" type="button">В избранное</button>
                                     <p class="star-rating star3"></p>
-                                    <p class="rating-number">Рейтинг 6,9</p>
+                                    <p class="rating-number">Рейтинг: 6,9</p>
                         </li>
                         <li class="hotel-item">
                                 <a href="#" class="hotel-item-link">
@@ -225,37 +231,37 @@
                                     <a class="hotel-more button brown-button" href="#" target="_blank">Подробнее</a>
                                     <button class="to-fav button blue-button" type="button">В избранное</button>
                                     <p class="star-rating star2"></p>
-                                    <p class="rating-number">Рейтинг 5,0</p>
+                                    <p class="rating-number">Рейтинг: 5,0</p>
                         </li>
                     </ol>
                     <div class="result-navigation">
                             <ul class="result-pagination-list">
                                 <li class="result-pagination-item">
-                                    <a class="result-pagination-link result-pagination-current">1</a>
+                                    <a class="result-pagination-link blue-button result-pagination-current">1</a>
                                 </li>
                                 <li class="result-pagination-item">
-                                    <a class="result-pagination-link" href="#">2</a>
+                                    <a class="result-pagination-link blue-button" href="#">2</a>
                                 </li>
                                 <li class="result-pagination-item">
-                                    <a class="result-pagination-link" href="#">3</a>
+                                    <a class="result-pagination-link blue-button" href="#">3</a>
                                 </li>
                                 <li class="result-pagination-item">
-                                    <a class="result-pagination-link" href="#">4</a>
+                                    <a class="result-pagination-link blue-button" href="#">4</a>
                                 </li>
                                 <li class="result-pagination-item">
-                                    <a class="result-pagination-link" href="#">...</a>
+                                    <a class="result-pagination-link blue-button" href="#">...</a>
                                 </li>
                                 <li class="result-pagination-item">
-                                    <a class="result-pagination-link" href="#">10</a>
+                                    <a class="result-pagination-link blue-button" href="#">10</a>
                                 </li>
                         </ul>
                         <div class="show-amount-wrapper">
-                            <label for="show-amount-select" class="block-text">Гостиниц на странице:</label>
-                                <select class="show-amount-select block-text" id="show-amount-select">
+                            <label for="show-amount-select" class="amount-label block-text">Гостиниц на странице:</label>
+                                <select class="show-amount-select result-control block-text" id="show-amount-select">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
-                                    <option value="4">4</option>
+                                    <option value="4" selected>4</option>
                                     <option value="5">5</option>
                                     <option value="6">6</option>
                                     <option value="7">7</option>
@@ -272,7 +278,7 @@
                 <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
                   <label for="email" class="suscribe-label visually-hidden">Введите ваш email</label>
                     <input class="email-input text-input" type="email" name="email" id="email" placeholder="Ваш e-mail">
-                    <button class="button-subscribe blue-button" type="submit">Подписаться</button>
+                    <button class="button-subscribe button blue-button" type="submit">Подписаться</button>
                 </form>
             </section>
         </main>
