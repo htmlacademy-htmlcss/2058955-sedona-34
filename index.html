@@ -10,7 +10,7 @@
   <body>
     <div class="body-container">
       <header class="page-header">
-        <a class="page-logo" href="index.html"><img class="header-logo" alt="Логотип City of Sedona" height="70" width="139" src="images/logo.svg"></a>
+        <a class="page-logo" href="index.html"><img class="header-logo" alt="Логотип City of Sedona" height="70" width="139" src="images/logo.svg" alt="Логотип седоны." title="Перейти на главную."></a>
         <nav class="navigation">
           <ul class="navigation-list">
             <li  class="navigation-item">
@@ -49,12 +49,12 @@
       </header>
       <main class="index-main main-container">
           <section class="page-welcome">
-            <img class="welcome-img" src="images/welcome.svg" width="458"  height="352"  alt="Welcome to the gorgeous Sedona">
+            <img class="welcome-img" src="images/welcome.svg" width="458"  height="352"  alt="Welcome to the gorgeous Sedona.">
             <h1 class="visually-hidden">Добро пожаловать в роскошную Седону</h1>
             <span class="visually-hidden">Потому что Гранд Каньон-отстой</span>
           </section>
           <section class="advantages">
-            <h2 class="advantges-title">Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</h2>
+            <h2 class="advantges-title head2">Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</h2>
             <p class="advantages-intro">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
             <ol class="advantages-list">
               <li class="advantages-item background2">
@@ -63,7 +63,7 @@
                     <p class="advantages-description middle-advantages-text">— №1 —</p>
                     <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
                   </div>
-                  <img class="advantages-city" src="images/advantages/city.jpg" width="800"  height="384"  alt="Городок">
+                  <img class="advantages-city" src="images/advantages/city.jpg" width="800"  height="384"  alt="Местное здание на фоне гор.">
                 <ul class="advantages-item-sub">
                   <li class="advantages-item background4">
                     <div class="advantages-item-container">
@@ -89,7 +89,7 @@
                 </ul>
               </li>
               <li class="advantages-item background2">
-                <img class="advantages-bridge" src="images/advantages/devil-bridge.jpg" width="800"  height="384" alt="Мост дьявола в каньоне">
+                <img class="advantages-bridge" src="images/advantages/devil-bridge.jpg" width="800"  height="384" alt="Мост дьявола в каньоне.">
                   <div class="advantages-item-container"> 
                     <h3 class="advantages-title head3">Там есть<br> мост дьявола</h3>
                     <p class="advantages-description middle-advantages-text">— №2 —</p>
@@ -118,22 +118,21 @@
                   <p class="advantages-description">Большинство едет в Гранд Каньон и толпится там</p>
                 </div>
               </li>
-            
             </ol>
           </section>
           <section class="interesting">
-            <h2 class="interesting-title">Заинтересовались?</h2>
+            <h2 class="interesting-title head2">Заинтересовались?</h2>
             <p class="interesting-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне  </p>
                   <button class="search-popup-call button brown-button" type="button" name="search-popup">
                   ПОИСК ГОСТИНИЦЫ В седоне
                   </button>
           </section>
           <section class="index-subscribe site-subscribe">
-            <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
+            <h2 class="subscribe-title head2">Подпишитесь на рассылку</h2>
             <p class="subscribe-description">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
             <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
               <label for="email" class="suscribe-label visually-hidden">Введите ваш email</label>
-                <input class="email-input text-input" type="email" name="email" id="email" placeholder="Ваш e-mail">
+                <input class="email-input text-input" type="email" name="email" id="email" placeholder="Ваш e-mail" required>
                 <button class="button-subscribe button blue-button" type="submit">Подписаться</button>
             </form>
           </section> 
@@ -188,69 +187,67 @@
         </a>
         </div>
       </footer>
-        
       </div>  
-      
-    </body>
-    <div class="modal-container closed-modal">
-      <div class="modal-plan">
-        <h2 class="modal-title head2">Поиск гостиницы в Седоне</h2>
-        <button class="close-button modal-close" type="button" name="modal-close" title="Закрыть"><svg width="13" height="13" viewBox="0 0 13 13" fill="black" xmlns="http://www.w3.org/2000/svg">
-          <path d="M13 1.2L11.8 0L6.5 5.3L1.2 0L0 1.2L5.3 6.5L0 11.8L1.2 13L6.5 7.7L11.8 13L13 11.8L7.7 6.5L13 1.2Z"/>
+      <div class="modal-container closed-modal">
+        <div class="modal-plan">
+          <h2 class="modal-title head2">Поиск гостиницы в Седоне</h2>
+          <button class="close-button modal-close" type="button" name="modal-close" aria-label="Закрыть" title="Закрыть"><svg width="13" height="13" viewBox="0 0 13 13" fill="black" xmlns="http://www.w3.org/2000/svg"><path d="M13 1.2L11.8 0L6.5 5.3L1.2 0L0 1.2L5.3 6.5L0 11.8L1.2 13L6.5 7.7L11.8 13L13 11.8L7.7 6.5L13 1.2Z"/>
           </svg>
-          </button>
-        <form class="modal-form" action="https://echo.htmlacademy.ru/" method="get">
-          <label class="modal-input-name head4" for="arrive-date">дата заезда:</label>
-          <div class="input-preresult">
-            <input class="modal-input date-input block-text" type="text" placeholder="Укажите дату" name="arrive-date" id="arrive-date" required>
-            <span class="wrong-input-message input-message">Мы не можем отправить вас в прошлое.</span>
-          </div>
-          <label class="modal-input-name head4" for="depart-date">дата выезда:</label>
-          <div class="input-preresult">
-              <input class="modal-input date-input block-text" type="text" placeholder="Укажите дату" name="depart-date" id="depart-date" required>
-              <span class="success-input-message input-message">На эти даты есть свободные номера. Пока есть.</span>
-          </div>
-          <div class="people-number-wrapper adults">
-            <label class="modal-input-name head4" for="adult-number">взрослые:</label>
-            <input class="modal-input people-number block-text" type="number" placeholder="0" name="adult-number" id="adult-number" min="1" max="99" required>
-            <button class="people-number-minus" type="button" title="Меньше">
-              <svg width="13" height="1" viewBox="0 0 13 1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 0L0 1L13 1V0L0 0Z"/>
-              </svg>
             </button>
-            <button class="people-number-plus" type="button" title="Больше">
-              <svg width="13" height="13" viewBox="0 0 13 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z"/>
-              </svg>                
-            </button>
-          </div>
-          <div class="people-number-wrapper childs">
-            <span class="modal-input-name">
-            <label class="modal-input-name head4" for="child-number">дети:</label>
-            <span class="tooltip">
-              <button class="tooltip-toggle"  type="button" aria-labelledby="tooltip-label">
-                <svg class="tooltip-icon"  width="1" height="9" viewBox="0 0 1 9" aria-hidden="true" focusable="false" fill="white" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0 9H1L1 3H0L0 9Z"/>
-                  <path d="M1 0H0V1H1V0Z"/>
-                  </svg>                  
+          <form class="modal-form" action="https://echo.htmlacademy.ru/" method="get">
+            <label class="modal-input-name head4" for="arrive-date">дата заезда:</label>
+            <div class="input-preresult">
+              <input class="modal-input date-input block-text" type="text" placeholder="Укажите дату" name="arrive-date" id="arrive-date" required>
+              <span class="wrong-input-message input-message">Мы не можем отправить вас в прошлое.</span>
+            </div>
+            <label class="modal-input-name head4" for="depart-date">дата выезда:</label>
+            <div class="input-preresult">
+                <input class="modal-input date-input block-text" type="text" placeholder="Укажите дату" name="depart-date" id="depart-date" required>
+                <span class="success-input-message input-message">На эти даты есть свободные номера. Пока есть.</span>
+            </div>
+            <div class="people-number-wrapper adults">
+              <label class="modal-input-name head4" for="adult-number">взрослые:</label>
+              <input class="modal-input people-number block-text" type="number" placeholder="0" name="adult-number" id="adult-number" min="1" max="99" required>
+              <button class="people-number-minus" type="button" aria-label="Меньше"  title="Меньше">
+                <svg width="13" height="1" viewBox="0 0 13 1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0L0 1L13 1V0L0 0Z"/>
+                </svg>
               </button>
-              <span class="tooltip-text small-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+              <button class="people-number-plus" type="button" aria-label="Больше" title="Больше">
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z"/>
+                </svg>                
+              </button>
+            </div>
+            <div class="people-number-wrapper childs">
+              <span class="modal-input-name">
+              <label class="modal-input-name head4" for="child-number">дети:</label>
+              <span class="tooltip">
+                <button class="tooltip-toggle"  type="button" aria-labelledby="tooltip-label">
+                  <svg class="tooltip-icon"  width="1" height="9" viewBox="0 0 1 9" aria-hidden="true" focusable="false" fill="white" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 9H1L1 3H0L0 9Z"/>
+                    <path d="M1 0H0V1H1V0Z"/>
+                    </svg>                  
+                </button>
+                <span class="tooltip-text small-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+              </span>
             </span>
-          </span>
-            <input class="modal-input people-number block-text" type="number" placeholder="0" name="child-number" id="child-number" min="0" max="99">
-            <button class="people-number-minus" type="button" title="Меньше"> 
-              <svg width="13" height="1" viewBox="0 0 13 1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 0L0 1L13 1V0L0 0Z"/>
-              </svg>
-            </button>
-            <button class="people-number-plus" type="button" title="Больше">
-              <svg width="13" height="13" viewBox="0 0 13 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z"/>
-              </svg>                
-            </button>
-          </div>  
-            <button class="modal-input-find button blue-button" type="submit">Найти</button>
-        </form>
+              <input class="modal-input people-number block-text" type="number" placeholder="0" name="child-number" id="child-number" min="0" max="99">
+              <button class="people-number-minus" type="button" aria-label="Меньше"  title="Меньше"> 
+                <svg width="13" height="1" viewBox="0 0 13 1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0L0 1L13 1V0L0 0Z"/>
+                </svg>
+              </button>
+              <button class="people-number-plus" type="button" aria-label="Больше" title="Больше">
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z"/>
+                </svg>                
+              </button>
+            </div>  
+              <button class="modal-input-find button blue-button" type="submit">Найти</button>
+          </form>
+        </div>
       </div>
-    </div>
+    </body>
+ 
 </html>
