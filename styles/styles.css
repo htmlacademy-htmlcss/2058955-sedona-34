@@ -14,10 +14,10 @@
     font-display: swap;
 }
 
-:focus, :focus-within, :focus-visible {
+/* :focus, :focus-within, :focus-visible {
     outline: 0;
     outline-offset: 0;
-}
+} */
 
 .button {
     padding-left: 15px;
@@ -182,6 +182,7 @@ html {
     align-self:flex-start;
     margin-left: 70px;
 }
+
 
 .navigation {
     margin-left: 239px;
@@ -507,14 +508,15 @@ html {
     opacity: 0.6;
 }
 
-.text-input:hover,
-.text-input:focus {
+.email-input:hover,
+.email-input:focus {
     background-color: #E6E6E6;
     outline: 0;
     outline-offset: 0;
 }
 
-.text-input:not(:placeholder-shown) {
+
+.email-input:not(:placeholder-shown) {
     background-color: white;
     color:#000000;
 }
@@ -572,9 +574,6 @@ html {
 .social-button:focus-visible,
 .social-button:focus-visible + .social-icon{
     fill:#68A2CA; 
-    outline-width: 2px;
-    outline-color: black;
-    outline-style: auto;
 }
 
 .social-icon:active {
@@ -733,6 +732,8 @@ html {
 .filter-input:focus-within:focus-visible + .filter-mark {
     background-color: rgba(255,255,255, 0.6);
     box-shadow: 0 0 0 3px #83B3D3;
+    outline: 0;
+    outline-offset: 0;
 }
 
 .filter-input:active + .filter-mark {
@@ -753,6 +754,8 @@ html {
 .catalog-filter-reset:focus-visible,
 .catalog-breadcrumbs-item:not(:last-child) .catalog-breadcrumbs-link:focus-visible {
     box-shadow: 0 0 0 3px #83B3D3;
+    outline: 0;
+    outline-offset: 0;
 }
 
 .catalog-filter-reset:active,
@@ -847,10 +850,14 @@ input[type="number"] {
 .filter-price-input:focus-visible {
     box-shadow: 0px 0px 0px 3px #81B3D2 , inset 0px 0px 0px 3px #81B3D2;
     z-index: 1;
+    outline: 0;
+    outline-offset: 0;
 }
 
 .filter-price-input:focus-visible:hover {
-    border-color: rgba(255,255,255)
+    border-color: rgba(255,255,255);
+    outline: 0;
+    outline-offset: 0;
 }
 
 .filter-price-input:not(:placeholder-shown) {
@@ -942,10 +949,14 @@ input[type="number"] {
 
 .price-range-toggle:focus-visible {
     box-shadow: 0 0 0 3px #83B3D3, 0px 4px 10px rgba(0, 0, 0, 0.25);
+    outline: 0;
+    outline-offset: 0;
 }
 
 .price-range-toggle:active {
     box-shadow: 0 0 0 2px #83B3D3, 0px 7px 15px rgba(0, 0, 0, 0.4);
+    outline: 0;
+    outline-offset: 0;
 }
 
 
@@ -984,6 +995,8 @@ input[type="number"] {
 .result-control:hover,
 .result-control:focus-visible {
     box-shadow: inset 0 0 0 2px #68A2CA;
+    outline: 0;
+    outline-offset: 0;
 }
 
 .result-control:active {
@@ -1023,6 +1036,8 @@ input[type="number"] {
 
 .view-type:focus{
     box-shadow: inset 0 0 0 2px #68A2CA;
+    outline: 0;
+    outline-offset: 0;
 }
 
 .view-type:active {
@@ -1291,6 +1306,8 @@ input[type="number"] {
 
 .modal-close:focus {
     box-shadow:0 0 0 3px #83B3D3;
+    outline: 0;
+    outline-offset: 0;
 }
 
 .modal-close:active {
