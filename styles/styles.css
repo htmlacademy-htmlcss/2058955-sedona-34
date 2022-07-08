@@ -246,13 +246,13 @@ html {
 
 .user-navigation-fav{
     position: relative;
-    background-image: url("/images/nav-fav.svg");
     background-color: rgba(255,255,255);
+    background-image: url("../images/nav-fav.svg");
 }
 
 .user-navigation-search {
-    background-image: url("/images/nav-search.svg");
     background-color: rgba(255,255,255);
+    background-image: url("../images/nav-search.svg");
 }
 
 .user-navigation-fav::after {
@@ -325,11 +325,11 @@ html {
   }
 
 .page-welcome {
+    background-color: rgba(73, 73, 131, 0.4);
     background-image: url("../images/index-background-divider.svg"), url("../images/index-background.jpg");
     background-repeat: no-repeat, no-repeat;
     background-position: bottom, bottom;
-    background-size: auto auto, auto auto;
-    background-color: rgba(73, 73, 131, 0.4)
+    background-size: auto auto, cover;
 }
 
 .welcome-img {
@@ -403,19 +403,19 @@ html {
 }
 
 .home-icon {
-    background-image: url("/images/advantages/house.svg");
+    background-image: url("../images/advantages/house.svg");
     background-repeat: no-repeat;
     background-position: bottom;
 }
 
 .food-icon {
-    background-image: url("/images/advantages/food.svg");
+    background-image: url("../images/advantages/food.svg");
     background-repeat: no-repeat;
 
     background-position: 50% 5px;
 }
 .souvenir-icon {
-    background-image: url("/images/advantages/souvenir.svg");
+    background-image: url("../images/advantages/souvenir.svg");
     background-repeat: no-repeat;
     background-position: bottom;
 }
@@ -475,9 +475,9 @@ html {
 .site-subscribe {
     padding: 94px 200px; 
     text-align: center;
-    background-image: url("../images/subscribe-background.jpg");
-    background-size: 100% auto;
     background-color: #82B3D3;
+    background-image: url("../images/subscribe-background.jpg");
+    background-size: auto 100%;
     color:white;
 }
 
@@ -559,24 +559,30 @@ html {
     line-height: 40px;
 }
 
+.social-button{
+    display: block;
+    width: 70%;
+    margin: auto;
+}
+
 .social-icon:not(.yt .social-icon) {
     margin-bottom: 2px;
 }
 
 
-.social-icon:hover,
-.social-icon:focus {
+.social-button:hover .social-icon,
+.social-button:focus .social-icon {
     fill:#68A2CA;
     outline: 0;
     outline-offset: 0;
 }
 
-.social-button:focus-visible,
-.social-button:focus-visible + .social-icon{
+
+.social-button:focus-visible .social-icon{
     fill:#68A2CA; 
 }
 
-.social-icon:active {
+.social-button:active .social-icon {
     fill:rgba(104, 162, 202, 0.3);
 }
 
@@ -624,8 +630,9 @@ html {
     padding: 35px 70px 70px;
     margin-bottom: 5px;
     color:white;
-    background-image: url("../images/catalog/catalog-background.jpg");
     background-color: white;
+    background-image: url("../images/catalog/catalog-background.jpg");
+    background-size: cover;
     background-repeat: space;
 }
 
@@ -1045,18 +1052,18 @@ input[type="number"] {
 }
 
 .sort-icon {
-    background-image: url("../images/catalog/sort-icon.svg");
     background-color: white;
+    background-image: url("../images/catalog/sort-icon.svg");
 }
 
 .sort-slide {
-    background-image: url("../images/catalog/sort-slide.svg");
     background-color: white;
+    background-image: url("../images/catalog/sort-slide.svg");
 }
 
 .sort-list {
-    background-image: url("../images/catalog/sort-list.svg");
     background-color: white;
+    background-image: url("../images/catalog/sort-list.svg");
 }
 
 .hotel {
@@ -1081,7 +1088,8 @@ input[type="number"] {
 .hotel-item {
     padding:0 20px 20px;
     display: grid;
-    grid-template:
+    grid-template-rows: 1fr auto auto auto;
+    grid-template-areas:
     "hotel hotel" 
     "type price" 
     "hotel-more to-fav" 
@@ -1134,8 +1142,8 @@ input[type="number"] {
     grid-area: star-rating;
     min-width: 24px;
     max-width: calc(24px * 5);
-    background-image: url("../images/catalog/star.svg");
     background-color: rgba(255,255,255);
+    background-image: url("../images/catalog/star.svg");
     background-repeat:repeat-x;
     background-position: left 0;
     height: 50%;
@@ -1432,9 +1440,9 @@ input[type="number"] {
     margin-left: auto;
     width: 420px;
     padding: 15px 53px 14px 19px;
+    background-color: #F2F2F2;
     background: no-repeat url("../images/calendar.svg");
     background-position: right 19px center;
-    background-color: #F2F2F2;
 }
 
 .modal-input-find {
@@ -1536,10 +1544,10 @@ input[type="number"] {
     top:-9px;
     width: 19px;
     height: 9px;
+    background-color: transparent;
     background-image: url("../images/tooltip-triangle.svg");
     background-repeat: no-repeat;
     background-position: center;
-    background-color: transparent;
 }
 /* класс для скрытия модалки */ 
 .closed-modal {
