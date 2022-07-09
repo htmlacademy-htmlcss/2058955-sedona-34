@@ -14,11 +14,6 @@
     font-display: swap;
 }
 
-/* :focus, :focus-within, :focus-visible {
-    outline: 0;
-    outline-offset: 0;
-} */
-
 .button {
     padding-left: 15px;
     padding-right: 15px;
@@ -34,11 +29,16 @@
     border-radius: 4px;
     border-style: none;
     cursor: pointer;
+    -webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 .button:disabled {
+    pointer-events: none;
     background-color: #E5E5E5;
-    cursor:initial;
 }
 
 .brown-button {
@@ -113,7 +113,6 @@
 }
 
 
-
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -176,6 +175,10 @@ html {
     outline-offset: 0;
 }
 
+.page-header a:not(.page-logo, .navigation-current):not([href]) {
+    pointer-events: none;
+    opacity:0.6;
+}
 
 .page-logo {
     position: absolute;
@@ -186,19 +189,22 @@ html {
 
 .navigation {
     margin-left: 239px;
-    min-width: 390px;
     padding-left:17px;
+
 }
 
 .navigation-list {
     display:flex;
+    flex-wrap: wrap;
     margin: 0;
     padding:0;
     list-style: none;
 }
 
-.navigation-item:not(:last-child) {
+.navigation-item{
+    flex-grow: 1;
     margin-right:34px;
+    text-align: center;
     text-transform: capitalize;
 }
 
@@ -208,6 +214,7 @@ html {
     padding-top:20px;
     padding-bottom:19px;
 }
+
 
 .navigation-current {
     pointer-events: none;
@@ -224,6 +231,7 @@ html {
 }
 
 .user-navigation-list {
+    align-self: flex-start;
     display:flex;
     flex-wrap: nowrap;
     height: 100%;
@@ -246,13 +254,13 @@ html {
 
 .user-navigation-fav{
     position: relative;
-    background-image: url("/images/nav-fav.svg");
     background-color: rgba(255,255,255);
+    background-image: url("../images/nav-fav.svg");
 }
 
 .user-navigation-search {
-    background-image: url("/images/nav-search.svg");
     background-color: rgba(255,255,255);
+    background-image: url("../images/nav-search.svg");
 }
 
 .user-navigation-fav::after {
@@ -276,10 +284,12 @@ html {
 
 
 .header-search-popup-call {
+    align-self: flex-start;
     min-width: 160px;
     margin-right: 70px;
     padding-top: 9px;
     padding-bottom: 8px;
+    margin-top: 14px;
 }
 
 
@@ -325,11 +335,11 @@ html {
   }
 
 .page-welcome {
+    background-color: rgba(73, 73, 131, 0.4);
     background-image: url("../images/index-background-divider.svg"), url("../images/index-background.jpg");
     background-repeat: no-repeat, no-repeat;
     background-position: bottom, bottom;
-    background-size: auto auto, auto auto;
-    background-color: rgba(73, 73, 131, 0.4)
+    background-size: auto auto, cover;
 }
 
 .welcome-img {
@@ -403,19 +413,19 @@ html {
 }
 
 .home-icon {
-    background-image: url("/images/advantages/house.svg");
+    background-image: url("../images/advantages/house.svg");
     background-repeat: no-repeat;
     background-position: bottom;
 }
 
 .food-icon {
-    background-image: url("/images/advantages/food.svg");
+    background-image: url("../images/advantages/food.svg");
     background-repeat: no-repeat;
 
     background-position: 50% 5px;
 }
 .souvenir-icon {
-    background-image: url("/images/advantages/souvenir.svg");
+    background-image: url("../images/advantages/souvenir.svg");
     background-repeat: no-repeat;
     background-position: bottom;
 }
@@ -430,6 +440,7 @@ html {
 
 .middle-advantages-text {
     margin: 30px 0;
+   
 }
 
 .advantages-item-container p:not(.middle-advantages-text) {
@@ -475,9 +486,9 @@ html {
 .site-subscribe {
     padding: 94px 200px; 
     text-align: center;
-    background-image: url("../images/subscribe-background.jpg");
-    background-size: 100% auto;
     background-color: #82B3D3;
+    background-image: url("../images/subscribe-background.jpg");
+    background-size: auto 100%;
     color:white;
 }
 
@@ -559,24 +570,30 @@ html {
     line-height: 40px;
 }
 
+.social-button{
+    display: block;
+    width: 70%;
+    margin: auto;
+}
+
 .social-icon:not(.yt .social-icon) {
     margin-bottom: 2px;
 }
 
 
-.social-icon:hover,
-.social-icon:focus {
+.social-button:hover .social-icon,
+.social-button:focus .social-icon {
     fill:#68A2CA;
     outline: 0;
     outline-offset: 0;
 }
 
-.social-button:focus-visible,
-.social-button:focus-visible + .social-icon{
+
+.social-button:focus-visible .social-icon{
     fill:#68A2CA; 
 }
 
-.social-icon:active {
+.social-button:active .social-icon {
     fill:rgba(104, 162, 202, 0.3);
 }
 
@@ -624,8 +641,9 @@ html {
     padding: 35px 70px 70px;
     margin-bottom: 5px;
     color:white;
-    background-image: url("../images/catalog/catalog-background.jpg");
     background-color: white;
+    background-image: url("../images/catalog/catalog-background.jpg");
+    background-size: cover;
     background-repeat: space;
 }
 
@@ -675,6 +693,11 @@ html {
     margin:0;
 }
 
+.disabled-filter-group{
+    user-select: none;
+    pointer-events: none;
+    opacity: 0.2;   
+}
 
 .catalog-filter-group {
     border:none;
@@ -707,8 +730,12 @@ html {
 
 .filter {
     display: flex;
-    cursor: pointer;
     position: relative;
+}
+
+.filter-name,
+.filter-mark {
+    cursor: pointer;
 }
 
 .filter-mark {    
@@ -724,10 +751,11 @@ html {
     border-radius: 4px;
 }
 
-.filter:hover > .filter-mark{
+.filter:hover > .filter-input:not(:disabled) ~ .filter-mark{
     background-color: rgba(255,255,255, 0.6);
-    
+    cursor: pointer;
 }
+
 
 .filter-input:focus-within:focus-visible + .filter-mark {
     background-color: rgba(255,255,255, 0.6);
@@ -736,8 +764,13 @@ html {
     outline-offset: 0;
 }
 
-.filter-input:active + .filter-mark {
+.filter-input:active:not(:disabled) + .filter-mark {
     opacity: 0.3;
+}
+
+.filter-input:disabled ~ span {
+    pointer-events: none;
+    opacity: 0.6;
 }
 
 .filter-input[type="checkbox"]:checked + .filter-mark {
@@ -762,6 +795,11 @@ html {
 .catalog-breadcrumbs-item:not(:last-child) .catalog-breadcrumbs-link:active {
     box-shadow: none;
     opacity: 0.3;
+}
+
+.catalog-filter-reset:disabled{
+    pointer-events: none;
+    visibility: hidden;
 }
 
 
@@ -959,8 +997,6 @@ input[type="number"] {
     outline-offset: 0;
 }
 
-
-
 .catalog-result {
     padding: 50px 71px 25px 72px;
 }
@@ -990,6 +1026,7 @@ input[type="number"] {
     font-family: inherit;
     background: no-repeat url("../images/catalog/select-sort.svg");
     background-position: center right 20px;
+    user-select: none;
 }
 
 .result-control:hover,
@@ -1004,6 +1041,7 @@ input[type="number"] {
 }
 
 .result-control:disabled {
+    pointer-events: none;
     opacity: 0.3;
 }
 
@@ -1045,18 +1083,18 @@ input[type="number"] {
 }
 
 .sort-icon {
-    background-image: url("../images/catalog/sort-icon.svg");
     background-color: white;
+    background-image: url("../images/catalog/sort-icon.svg");
 }
 
 .sort-slide {
-    background-image: url("../images/catalog/sort-slide.svg");
     background-color: white;
+    background-image: url("../images/catalog/sort-slide.svg");
 }
 
 .sort-list {
-    background-image: url("../images/catalog/sort-list.svg");
     background-color: white;
+    background-image: url("../images/catalog/sort-list.svg");
 }
 
 .hotel {
@@ -1081,7 +1119,8 @@ input[type="number"] {
 .hotel-item {
     padding:0 20px 20px;
     display: grid;
-    grid-template:
+    grid-template-rows: 1fr auto auto auto;
+    grid-template-areas:
     "hotel hotel" 
     "type price" 
     "hotel-more to-fav" 
@@ -1134,8 +1173,8 @@ input[type="number"] {
     grid-area: star-rating;
     min-width: 24px;
     max-width: calc(24px * 5);
-    background-image: url("../images/catalog/star.svg");
     background-color: rgba(255,255,255);
+    background-image: url("../images/catalog/star.svg");
     background-repeat:repeat-x;
     background-position: left 0;
     height: 50%;
@@ -1432,9 +1471,9 @@ input[type="number"] {
     margin-left: auto;
     width: 420px;
     padding: 15px 53px 14px 19px;
+    background-color: #F2F2F2;
     background: no-repeat url("../images/calendar.svg");
     background-position: right 19px center;
-    background-color: #F2F2F2;
 }
 
 .modal-input-find {
@@ -1536,10 +1575,10 @@ input[type="number"] {
     top:-9px;
     width: 19px;
     height: 9px;
+    background-color: transparent;
     background-image: url("../images/tooltip-triangle.svg");
     background-repeat: no-repeat;
     background-position: center;
-    background-color: transparent;
 }
 /* класс для скрытия модалки */ 
 .closed-modal {
