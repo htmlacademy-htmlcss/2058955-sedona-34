@@ -405,7 +405,7 @@ html {
     background-color: rgba(131, 179, 211, 0.2);
 } 
 
-.no-br {
+.no-br-description {
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -856,7 +856,7 @@ input[type="number"] {
     margin: 0;
     width: 50%;
     flex: 1 0;
-    padding: 12px 17px 11px 17px;
+    padding: 12px 34px 11px 17px;
     background: rgba(0, 0, 0, 0);
     font-family: inherit;
     color: white;
